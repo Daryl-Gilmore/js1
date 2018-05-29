@@ -30,7 +30,8 @@ console.log(firstName);
 alert(lastName);
 
 //Confirms the user's birthday
-let result = confirm(birthday);
+let result = prompt("what's your birth day","Decenber 17-1966");
+confirm(new Date(result));
 
 //alerts the result
 alert(result);
