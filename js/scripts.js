@@ -40,19 +40,21 @@ console.log(removedItems, "the items that we removed")
 
 const products = [["blanket", 12.99, "The best blanket around."], ["rattle", 4.99, "It rattles man..."], ["diapers", 12.99, "They cath the doo doo"]];
 
-alert(Products[0] [1]);
 // let copy = products.slice();
 
 let copy = products.slice();
 
 console.log(favs.indexOf("Rogue One"));
 
-let favMovie = ["Top gun" , "Tom Cruse"];
-let secondFav = ["Days of Thunder"]
+let favMovie = ["The GodFather" , "Al Pacino"];
+let secondFav = ["Days of Thunder" , "Tom Cruse"];
+let thirdfav = ["Top Gun" , "Tom Cruse"];
+let fourthfav = ["Rocky" , "Sylvester Stallone"];
+let fifthfav = ["Unforgiven" , "Clint Eastwood"]
 
 let favoriteMovies = [];
 
-favoriteMovies.push(favMovie, secondFav,);
+favoriteMovies.push(favMovie, secondFav, thirdfav, fourthfav, fifthfav);
 
 let titles =[];
 
