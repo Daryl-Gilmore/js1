@@ -1,82 +1,60 @@
-let birthday="12-17-1966"
-confirm("Is"+ birthday + "your birthday");
-let name= ""; //truthy or true
-let age = 51; //falsey or false
+let array = ["javascript" , 100,{} , [] , true];
 
-if(!name && age) { //true.
-  alert("one exist");
-}
-if(name || age) {//true.
-}
+// console.log(array[6]);
 
-const numAge = 51; //Number
-const stringAge = "51"; // String
-if(numAge != stringAge) {
-  alert("they\'re the same!'")
-} //this should always be false...why isnt it?
+//Try it out #1...
+let favs = ["Rogue One" , 51, true, 2004];
 
-let objectOne ={
-  name: "Daryl"
-};
+favs.reverse();
 
-let objectTwo = {
-  name: "Daryl"
-};
-// alert(objectOne === objectTwo); // Always false
+console.log(favs);
 
-alert(objectOne == objectTwo);
+console.log(Array.isArray(favs));
 
-if(numAge <= stringAge.length) {
-  alert("whaaaaat");
-}
+console.log(favs);
 
-var mystring = "birthday";
-var objString = new String(mystring);
-if (mystring == objString) {alert("whaaat");}
-//alert(myString === objString);
+favs.unshift("Pizza");//begging//push at the end...
 
-let limit = 12;
-limit++;
-limit = limit + 1;
+favs.pop();//will keep last member...
 
-console.log(limit);
-limit += 7;
-limit = limit / 7;
-console.log(limit);
-//
+let first = favs.shift();//remove the first item in Array and returns that removed item to you as your varibble 'first'...
 
-let myNumber = "77";
+console.log(favs)
 
-myNumber = parseInt("muNumber");
+//access the last member of the Array
+//access the second-to-last member of the array
 
-console.log(isNaN(myNumber));
+console.log(favs[favs.length - 2]);//second...
 
-console.log(myNumber++);
-//
+console.log(favs[favs.length - 1]);//last...
 
- let numOne = prompt("Give me a number", "10");
- let numTwo = prompt("Give me a number", "10");
- numTwo = parseInt(numTwo);
- // alert(numOne + numTwo);
+//Splice: Remove elements and optionally add others. Returns the removed elements in a new array...
 
-if(numOne > numTwo) {
-  alert("Your first number is bigger than your second numTwo");
-} else if(numOne === numTwo ){
-  alert("They are the same...");
-} else {
-  alert("Something went wrong...");
-}
+//one arg will remove that index and everything after...
+console.log(favs, "before");
+let  removedItems = favs.splice(2, 1, false, "Faith", "Rocky");
 
-let firstName = prompt("What is your first name" , "Daryl");
+console.log(favs, "this is the result of splice");
 
-switch(firstName) {
-  case "Daryl":
-  alert("Hello Daryl");
-  break;
-  case "john":
-  alert("Your name is very common.");
-  break;
-  default:
-  alert("I have never heard that name before.");
-  break;
-}
+console.log(removedItems, "the items that we removed")
+
+const products = [["blanket", 12.99, "The best blanket around."], ["rattle", 4.99, "It rattles man..."], ["diapers", 12.99, "They cath the doo doo"]];
+
+alert(Products[0] [1]);
+// let copy = products.slice();
+
+let copy = products.slice();
+
+console.log(favs.indexOf("Rogue One"));
+
+let favMovie = ["Top gun" , "Tom Cruse"];
+let secondFav = ["Days of Thunder"]
+
+let favoriteMovies = [];
+
+favoriteMovies.push(favMovie, secondFav,);
+
+let titles =[];
+
+titles.push[favoriteMovies[0] [0] , favoriteMovies[1][0]];
+// console.log(favs.last Index of rouge one)
