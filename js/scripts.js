@@ -19,7 +19,7 @@ favs.pop();//will keep last member...
 
 let first = favs.shift();//remove the first item in Array and returns that removed item to you as your varibble 'first'...
 
-console.log(favs)
+console.log(favs);
 
 //access the last member of the Array
 //access the second-to-last member of the array
@@ -46,17 +46,25 @@ let copy = products.slice();
 
 console.log(favs.indexOf("Rogue One"));
 
-let favMovie = ["The GodFather" , "Al Pacino"];
-let secondFav = ["Days of Thunder" , "Tom Cruse"];
-let thirdfav = ["Top Gun" , "Tom Cruse"];
-let fourthfav = ["Rocky" , "Sylvester Stallone"];
+let favMovie = ["The Godfather" , "Al Pacino"];
+let secondFav = ["Rocky" , "Sylvester Stallone"];
+let thirdfav = ["Days of Thunder" , "Tom Cruse"];
+let fourthfav = ["Top Gun" , "Tom Cruse"];
 let fifthfav = ["Unforgiven" , "Clint Eastwood"]
 
 let favoriteMovies = [];
 
+alert(favoriteMovies);
+
 favoriteMovies.push(favMovie, secondFav, thirdfav, fourthfav, fifthfav);
 
-let titles =[];
+let titles =["The Godfather" , "Unforgiven"];
+
+console.log(favoriteMovies[0] , favoriteMovies[4]);
+
+alert("The Godfather");
+
+console.log(favoriteMovies.length);
 
 titles.push[favoriteMovies[0] [0] , favoriteMovies[1][0]];
 // console.log(favs.last Index of rouge one)
