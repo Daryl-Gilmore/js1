@@ -94,7 +94,7 @@
 //   } else {
 //     userAge = prompt('how old are you?', '30');
 //     userUse = prompt('How much do you use every day?', '1');
-//     lifetimeCalculator(parseInt(userAge), parseInt(userUse));
+//     lifetimeCalculator(parseInt(userAge), parseInt(userUse)); //18250//
 //   }
 // }
 //
@@ -177,3 +177,19 @@ alert(doneItems);
 
 
 //expected output: 2
+
+//function's...
+//console.log()same as console.log('');
+
+//console.log (arr)
+
+//['hello', 'world'].forEach(arr =>( {
+//})
+
+//Array.forEach()
+
+//string.toUpperCase()
+
+//function toUpperCase(string) {
+// return the uppercase of string
+//}
