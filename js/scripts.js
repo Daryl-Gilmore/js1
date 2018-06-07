@@ -175,7 +175,7 @@ alert(doneItems);
 
 // alert done = (1, 2);
 
-// jhewfjewnhfjkewnfk
+// jhewfjewnhfjkewnfk kjdbvfjkdv
 //expected output: 2
 
 //function's...
