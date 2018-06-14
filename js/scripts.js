@@ -1,90 +1,75 @@
-//On your takehome-day5 branch write a program that uses functions to:
+let body =
+document.getElementsByTagName('body');
+//array
+console.log(body);
 
-//1-function powerOftwo(number){
-//if(!isNaN(number)) {
- //return number * number;
-//} else }
-//let answer = powerOftwo()
-//}
-/////////////////function eval() {
-  //let num = prompt('please enter a number');
-  //1...Take a number and return the square of that number (power of 2).
+let classes = document.getElementsByClassName('my-header');
 
-//}
-//if(!isNaN(num)) {
+console.log(classes[0]);
 
-  // get the square of num enter a Number
+let id = document.getElementById('my-paragraph');
+console.log(id);
 
- //console.log (num * num);
-//} else {
-  alert(NaN);
-  eval();
-//alert  NaN and prompt for a Number
+//Newer methods:
+let tag = document.querySelector('body');
+console.log(tag);
 
-//}
+let myClass =
+document.querySelector('.my-header');
+let myid =
+document.querySelector('#my-paragraph');
+console.log(myid);
 
-  //2...If a non-number argument is passed into the function, alert NaN and prompt for another response
+let tags =
+document.querySelectorAll('body');
 
-//}
-// eval(); {
-//
-//   console.log ('two');
-// }
-//   alert(NaN);
-//
-// let two = prompt('add another response');
-
-//3...In a second function, capitalize the first letter of a string and add a period (.) to the end of the string if it doesn't already end with a period
-
-//function mydog() {
-  //let mydog = riggs('capSingleWord'('riggs'));
-//}
-//console.log('riggs');
-//mydog riggs capSingleWord(riggs r) {
-
-        //if(r.isEmpty() || r.length()<2) {
-
-            //return Character.toUpperCase(r.charAt(0))+"";
-        //}
-        //else {
-
-            //return Character.toUpperCase(r.charAt(0)) + r.substring(1);
-      //}
-    //}
-////////////////////////////////////function mycapt() {
-  //let answer = prompt('please answer question?');
-  // console.log(answer.charAt(0).toUppercase())
-  // console.log(answer.slice(1));
-  //let firstLetter = answer.charAt(0).toUpperCase();
-  //let restOfword = answer.splice(1);
-  //let cap = (firstLetter + restOfword).toString();
-  //console.log(cap);
-//  if(string.charAt(string.length - 1) !=='.') string = string + '.';
-  //return string;
-
-//}
-//mycapt()
-//4...Create a string that will flip the position of the first and second half of a string. For example, the string “abcdef” would be returned as “defabc”.
- //Hint: use substring.
-
- function reverseHalves(string) {
-   let letHalf = string.length /2
-   letFirstHalf = string.substring(0, halfIndex);
-   let secondHalf = string.substring(halfIndex,string.length);
-   alert('${secondHalf}${firstHalf}');
- }
+//try it out...
 
 
-//BONUS: If you are bored by all that, write a function that checks if a given string is a palindrome.
-function isPalindrome(string) {
-  let reversed = string.split('').reverse().join('')
-  if(string === reversed) return true;
-  return false
+function queryDom(methodName,element) {
+  switch(methodName.toLowerCase()) {
+    case 'getelementsbytagname':
+    document.getelementsbytagname(element);
+    break;
+    case 'querySelector':
+    document.querySelector('.${element}');
+    break;
+    default:
+    break;
+  }
 }
 
-//.split('')  returns an array...
-//.reverse()  only works on arrays...
-//.join('')   returns a string...
+myClass.addEventListener(
+  'click', //first arg...
+  e => { //second arg CALLBACK function...
+  alert ('you clicked on me!!!');
+}
+)
+console.log('hello world');
 
-if(string === reversed) return true;
-return false
+
+
+//1..On your day6 branch, create a basic HTML mockup with a button, a div with some height and background color, and an h1 with some text
+let button = document.querySelector('button');
+let div = document.querySelector('div')
+//2..Create event listeners for each:
+button.addEventListener(
+  'click', //first arg...
+  e => { //second arg CALLBACK function...
+  alert('you clicked on me!!!');
+})
+
+//3..For the button, alert the user with a message when they click it.
+
+
+//4..For the div, change the color of the background when their mouse goes into the div.
+
+div.addEventListener('mouseenter', e => {
+  e.target.stylebackgroundColor = "#e40007";
+  console.log(e);
+});
+const myPageTitle = document.querySelector('h1');
+myPageTitle.addEventListener('mouseleave', e => {
+console.log(e);
+e.target.style.color = "#CCCCCC"
+});
