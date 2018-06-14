@@ -1,75 +1,51 @@
-let body =
-document.getElementsByTagName('body');
-//array
-console.log(body);
+let button =
+document.querySelector('button');
+let div =
+document.querySelector('div');
+const body =
+document.querySelector('body');
+button.add
+div.innerHTML = '<p>Lorem ipsum</p>';
 
-let classes = document.getElementsByClassName('my-header');
+let newH1 = document.createElement('h1');
+newH1.textContent = 'Login here!!';
+// console.log(newH1);
+// body.appendChild(newH1);
 
-console.log(classes[0]);
+newH1.classList.add('text-center');
 
-let id = document.getElementById('my-paragraph');
-console.log(id);
+body.insertBefore(newH1, div);
 
-//Newer methods:
-let tag = document.querySelector('body');
-console.log(tag);
+div.id = 'red_text';
 
-let myClass =
-document.querySelector('.my-header');
-let myid =
-document.querySelector('#my-paragraph');
-console.log(myid);
+div.classList.add('text-center');
 
-let tags =
-document.querySelectorAll('body');
-
-//try it out...
+div.addEventListener('click', e => {
+  div.classList.toggle('text-center');
+  div.classList.replace('blue-background',
+  'green-background');
+});
 
 
-function queryDom(methodName,element) {
-  switch(methodName.toLowerCase()) {
-    case 'getelementsbytagname':
-    document.getelementsbytagname(element);
-    break;
-    case 'querySelector':
-    document.querySelector('.${element}');
-    break;
-    default:
-    break;
+newH1.className = 'text-center';
+
+
+
+myImg = document.createElement('img');
+myImg.setAttribute('src', 'https://m.media-amazon.com/images/M/MV5BMjQ1MzcxNjg4N15BMl5BanBnXkFtZTgwNzgwMjY4MzI@._V1_UX182_CR0,0,182,268_AL_.jpg')
+div.appendChild(myImg);
+console.log(myImg);
+
+
+for(let i = 1; i <= 100; i++) {
+  let p = document.createElement('p');
+  if(i % 3 === 0 && i % 5 === 0) {
+    p.textContent = 'FizzBuzz';
+  } else if (i % 5 === 0) {
+  }else if(i % 3 === 0) {
+      p.textContent = 'Fizz';
+    } else {
+      p.textContent = i;
+    }
+    body.appendChild(p);
   }
-}
-
-myClass.addEventListener(
-  'click', //first arg...
-  e => { //second arg CALLBACK function...
-  alert ('you clicked on me!!!');
-}
-)
-console.log('hello world');
-
-
-
-//1..On your day6 branch, create a basic HTML mockup with a button, a div with some height and background color, and an h1 with some text
-let button = document.querySelector('button');
-let div = document.querySelector('div')
-//2..Create event listeners for each:
-button.addEventListener(
-  'click', //first arg...
-  e => { //second arg CALLBACK function...
-  alert('you clicked on me!!!');
-})
-
-//3..For the button, alert the user with a message when they click it.
-
-
-//4..For the div, change the color of the background when their mouse goes into the div.
-
-div.addEventListener('mouseenter', e => {
-  e.target.stylebackgroundColor = "#e40007";
-  console.log(e);
-});
-const myPageTitle = document.querySelector('h1');
-myPageTitle.addEventListener('mouseleave', e => {
-console.log(e);
-e.target.style.color = "#CCCCCC"
-});
